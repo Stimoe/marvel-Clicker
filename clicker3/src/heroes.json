@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Wolverine",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/1/14487/6972121-wolverine.jpg",
+    "occupation": "SuperHero",
+    "location": "Earth"
+  },
+  {
+    "id": 2,
+    "name": "Spiderman",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/8/80103/6197311-c6d76a022f2dcf57c29e2ef87a3c7d47.jpg",
+    "occupation": "Newspaper photographer",
+    "location": "Earth"
+  },
+  {
+    "id": 3,
+    "name": "Thor",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/10/100647/6436253-thor2.jpg",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 4,
+    "name": "Iron Man",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/3/31666/4956367-invim2015001-maleevvar-d8a38.jpg",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 5,
+    "name": "Hulk",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/14/140903/4127149-11.jpg",
+    "occupation": "Scientist",
+    "location": "Earth"
+  },
+  {
+    "id": 6,
+    "name": "Captain America",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/12/124259/7025229-rco022_1564570505.jpg",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 7,
+    "name": "Dare Devil",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/6/68065/6335305-5934933145-DYb8d.jpg",
+    "occupation": "Attorney",
+    "location": "Earth"
+  },
+  {
+    "id": 8,
+    "name": "The Punisher",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/11125/111253019/6465266-punisher_vol_12_1_textless.jpg",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 9,
+    "name": "Deadpool",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/3/31666/4943681-dpool2015007-cov-bec9c.jpg",
+    "occupation": "Super Hero",
+    "location": "Earth"
+  },
+  {
+    "id": 10,
+    "name": "Silver Surfer",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/3/31666/3627093-tumblr_mwhlifyyfk1spk5yeo1_1280.jpg",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 11,
+    "name": "Gambit",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/11126/111269625/6182822-gc.jpg",
+    "occupation": "Superhero",
+    "location": "Earth"
+  },
+  {
+    "id": 12,
+    "name": "Cyclops",
+    "image": "https://comicvine1.cbsistatic.com/uploads/scale_small/1/14487/6966021-cyclops.jpg",
+    "occupation": "Super Hero",
+    "location": "Earth"
+  }
+]

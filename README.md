@@ -1,13 +1,13 @@
-# Clicker Game
+# Marvel Clicker
 
-Clicker game is a memory game.It uses react, and a json file to randomize cards.  The point of the game is to not click the same card twice.
-
-
-
-The project is a good example of how components inr eact can be used with json files to render different things.
+Marvel Clicker game is a memory game.It uses react, and a json file to randomize cards.  The point of the game is to not click the same card twice.
 
 
 
-Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://stimoe.github.io/Bootstrap-Portfolio/ This was solely produced by myself, Thomas Stimac
+The project is a good example of how components in react can be used with json files to render different things.
 
-Link to Project, https://stimoe.github.io/clicker3/
+
+
+Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://stimoe.github.io/Portfolio-Contact/ This was solely produced by myself, Thomas Stimac
+
+Link to Project, https://stimoe.github.io/Marvel-Clicker/

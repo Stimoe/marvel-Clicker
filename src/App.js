@@ -1,7 +1,7 @@
 import React from "react";
 import HeroCard from "./components/HeroCard";
 import Wrapper from "./components/Wrapper";
-import heroes from "./heroes.json";
+import heroes from "./heroes.json.js";
 import "./App.css";
 // import { setupMaster } from "cluster";
 // score=0

@@ -19,3 +19,6 @@
 .background {
   background-image: "https://images8.alphacoders.com/570/thumb-1920-570875.png";
 }
+.score {
+  float: left;
+}

@@ -31,8 +31,10 @@ class App extends React.Component {
           if(this.state.count>this.state.highScore){
             console.log("count ",this.state.count);
             newHighScore=this.state.count
-            this.state.clickedCards=newClickedCards
-            this.state.count=newCount
+            this.setState({
+              clickedCards:newClickedCards,
+              count: newCount
+            })
             alert("You clicked the same Card!!")
             this.setState({
               highScore:newHighScore,
@@ -123,8 +125,7 @@ console.log("clicked cards in state ",this.state.clickedCards);
         </div>
         <div className="row">
         <h1 className="Score">Current Score {this.state.count}</h1>
-        </div>
-        <div className="row">
+   
         <h1 className="HighScore">High Score {this.state.highScore}</h1>
         </div>
         </div>

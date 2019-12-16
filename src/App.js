@@ -3,16 +3,14 @@ import HeroCard from "./components/HeroCard";
 import Wrapper from "./components/Wrapper";
 import heroes from "./heroes.json";
 import "./App.css";
-// import { setupMaster } from "cluster";
-// score=0
-console.log("heroes ",heroes);
+
 
 
 let randomHeroes=heroes
-// let randomHeroCards=[]
+
 let newHighScore;
 let emptyArray=[]
-// let count=0
+
 class App extends React.Component {
   
   state ={
@@ -27,9 +25,9 @@ class App extends React.Component {
       if (this.state.clickedCards[k]===id) {
         let newCount=-1
         let newClickedCards=[]
-          console.log("same");
+
           if(this.state.count>this.state.highScore){
-            console.log("count ",this.state.count);
+
             newHighScore=this.state.count
             this.setState({
               clickedCards:newClickedCards,
@@ -52,7 +50,6 @@ class App extends React.Component {
       this.setState({
         clickedCards:newId
       });
-console.log("clicked cards in state ",this.state.clickedCards);
       const randomHeroes = heroes.slice(0)
       for (let i = 0; i < heroes.length; i++) {
        
@@ -62,8 +59,7 @@ console.log("clicked cards in state ",this.state.clickedCards);
         randomHeroes[i] = randomHeroes[randomNumber]
         randomHeroes[randomNumber] = temp
       }
-      console.log("randomized ",randomHeroes);
-      // randomHeroCards.push(randomHeroes)
+
 
       this.setState({
         randomHeroCards:randomHeroes,
@@ -73,11 +69,8 @@ console.log("clicked cards in state ",this.state.clickedCards);
     }
 
     same = (props)=>{
-  console.log("props ",props);
-  
       // let newHighScore=this.state.count
       if(this.state.count>this.state.highScore){
-      console.log("count ",this.state.count);
       newHighScore=this.state.count
       emptyArray=[]
       // oldClickedCards=this.state.clickedCards
@@ -85,14 +78,11 @@ console.log("clicked cards in state ",this.state.clickedCards);
         highScore:newHighScore,
         clickedCards:emptyArray
       })
-      // newHighScore=this.state.count
-      //   this.handleRandom()
+
       }
 
       this.changeScores()
-      console.log("the new high score? ",newHighScore);
-      //  console.log("new array ",oldClickedCards);
-      // let newCount=0;
+
     }
     changeScores = ()=>{
       this.setState({
@@ -100,14 +90,9 @@ console.log("clicked cards in state ",this.state.clickedCards);
         clickedCards:[],
         highScore: newHighScore
       });
-      console.log("example ", this.state);
-      console.log("new High Score!! ",this.state.highScore);
-      console.log("new count!! ",this.state.count);
-      console.log("new clicked Cards!! ",this.state.clickedCards);
+
      
-// this.setState({
-//   count:0
-// })
+
    }
 
 

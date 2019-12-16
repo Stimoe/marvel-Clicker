@@ -8,6 +8,6 @@ The ooint of the game is to not click on the same picture twice.  It records how
 
 
 
-Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://github.com/Stimoe/Portfolio-Contact This was solely produced by myself, Thomas Stimac
+Any questions can be sent to me Thomas Stimac, on my porfolio page, at https://stimoe.github.io/Thomas-Portfolio-Page/ This was solely produced by myself, Thomas Stimac
 
 Link to Project, https://marvel-clicker-game.herokuapp.com/

@@ -3,7 +3,7 @@ import HeroCard from "./components/HeroCard";
 import Wrapper from "./components/Wrapper";
 import heroes from "./heroes.json";
 import "./App.css";
-
+import GameWon from "./components/gameWon"
 
 
 let randomHeroes=heroes
@@ -19,6 +19,7 @@ class App extends React.Component {
     clickedCards: [],
     highScore: 0
   }
+
   handleRandom = (id)=>{    
     let newId=[]
     for (let k = 0; k < this.state.clickedCards.length; k++) {
@@ -97,6 +98,14 @@ class App extends React.Component {
 
 
   render() {
+    if (this.state.count === 10) {
+     
+      return (
+        <GameWon />
+      )
+    }
+
+
     return (
 
       <Wrapper>
@@ -117,7 +126,7 @@ class App extends React.Component {
     
       <div className="row theCards">
         <br></br>
-        {/* <div id="thecards"> */}
+
         {this.state.randomHeroCards.map(hero=>{
           return(<HeroCard
             key={hero.id}
@@ -130,7 +139,7 @@ class App extends React.Component {
             />)
           })}
           </div>
-          {/* {/* </div> */}
+
         
           
           

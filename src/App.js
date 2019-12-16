@@ -6,146 +6,155 @@ import "./App.css";
 import GameWon from "./components/gameWon"
 
 
-let randomHeroes=heroes
+let randomHeroes = heroes
 
 let newHighScore;
-let emptyArray=[]
+let emptyArray = []
 
 class App extends React.Component {
-  
-  state ={
-    randomHeroCards:randomHeroes,
+
+  state = {
+    randomHeroCards: randomHeroes,
     count: 0,
     clickedCards: [],
-    highScore: 0
+    highScore: 0,
+    currentCard:[]
+
   }
 
-  handleRandom = (id)=>{    
-    let newId=[]
-    for (let k = 0; k < this.state.clickedCards.length; k++) {
-      if (this.state.clickedCards[k]===id) {
-        let newCount=-1
-        let newClickedCards=[]
 
-          if(this.state.count>this.state.highScore){
+  cardClicked = (id) => {
 
-            newHighScore=this.state.count
-            this.setState({
-              clickedCards:newClickedCards,
-              count: newCount
-            })
-            alert("You clicked the same Card!!")
-            this.setState({
-              highScore:newHighScore,
-              count: newCount,
-              clickedCards:newClickedCards
-            })
+let newClickedCards=this.state.clickedCards
+var same = newClickedCards.includes(id)
+let currentCount=this.state.count
+let currentHighScore=this.state.highScore
 
-          }
-          // this.same()
-          
-        } 
-      }
-      newId=this.state.clickedCards
-      newId.push(id)
-      this.setState({
-        clickedCards:newId
-      });
-      const randomHeroes = heroes.slice(0)
-      for (let i = 0; i < heroes.length; i++) {
-       
-       
-        let randomNumber = Math.floor(Math.random() * (i + 1))
-        let temp= randomHeroes[i]
-        randomHeroes[i] = randomHeroes[randomNumber]
-        randomHeroes[randomNumber] = temp
-      }
+console.log("clicked cards ",newClickedCards);
+console.log("current count ",currentCount);
+console.log("current highscore ",currentHighScore);
+if(same&&currentCount>currentHighScore){
+console.log("same and higher");
+this.setState({
+  highScore:currentCount,
+  count:0,
+  clickedCards:[]
+})
+}
+else if(same&&currentCount<currentHighScore){
+this.setState({
+  count:0,
+  clickedCards:[]
+})
+}
+
+else {
+  currentCount+=1
+  newClickedCards.push(id)
+  
+  
+  this.setState({
+  clickedCards:newClickedCards,
+  count: currentCount
+  })
+  }
+    this.handleRandom()
+  }
 
 
-      this.setState({
-        randomHeroCards:randomHeroes,
-        count: this.state.count + 1
-      });
-      
+  startOver=()=> {
+    this.setState({
+      count: 0,
+      clickedCards: [],
+      highScore: 0,
+      currentCard:[]
+    })
+    this.handleRandom()
+  }
+
+
+
+
+
+
+  handleRandom = (id) => {
+    const randomHeroes = heroes.slice(0)
+    for (let i = 0; i < heroes.length; i++) {
+
+
+      let randomNumber = Math.floor(Math.random() * (i + 1))
+      let temp = randomHeroes[i]
+      randomHeroes[i] = randomHeroes[randomNumber]
+      randomHeroes[randomNumber] = temp
     }
 
-    same = (props)=>{
-      // let newHighScore=this.state.count
-      if(this.state.count>this.state.highScore){
-      newHighScore=this.state.count
-      emptyArray=[]
-      // oldClickedCards=this.state.clickedCards
-      this.setState({
-        highScore:newHighScore,
-        clickedCards:emptyArray
-      })
 
-      }
+    this.setState({
+      randomHeroCards: randomHeroes,
 
-      this.changeScores()
+    });
 
-    }
-    changeScores = ()=>{
-      this.setState({
-        count: 0,
-        clickedCards:[],
-        highScore: newHighScore
-      });
+  }
 
-     
-
-   }
-
+  
 
   render() {
     if (this.state.count === 10) {
-     
+
       return (
-        <GameWon />
+        <div class = "winScreen">
+
+        <h1 class = "title">You Win</h1>
+
+       
+          <button onClick={()=>{this.startOver()}} type="button" class="btn btn-primary">
+            Start over
+          </button>
+
+    </div>
       )
     }
 
-
+else {
     return (
 
-      <Wrapper>
-     
-          <div id="headerStuff">
+      // <Wrapper>
+      <div>
+        <div id="headerStuff">
           <div className="row">
-        <h1 className="title">Heroes List</h1>
+            <h1 className="title">Heroes List</h1>
+          </div>
+          <div className="row">
+            <h1 className="title">Don't click the same Hero twice</h1>
+          </div>
+          <div className="row">
+            <h1 className="score title">Current Score {this.state.count} High Score {this.state.highScore}</h1>
+          </div>
         </div>
-        <div className="row">
-        <h1 className="title">Don't click the same Hero twice</h1>
-        </div>
-        <div className="row">
-        <h1 className="Score">Current Score {this.state.count}</h1>
-   
-        <h1 className="HighScore">High Score {this.state.highScore}</h1>
-        </div>
-        </div>
-    
-      <div className="row theCards">
-        <br></br>
 
-        {this.state.randomHeroCards.map(hero=>{
-          return(<HeroCard
-            key={hero.id}
-            id={hero.id}
-            name={hero.name}
-            image={hero.image}
-            occupation={hero.occupation}
-            location={hero.location}
-            handleClick={this.handleRandom}
+        <div className="row theCards">
+          <br></br>
+
+          {this.state.randomHeroCards.map(hero => {
+            return (<HeroCard
+              key={hero.id}
+              id={hero.id}
+              name={hero.name}
+              image={hero.image}
+              occupation={hero.occupation}
+              location={hero.location}
+              handleClick={this.cardClicked}
             />)
           })}
-          </div>
+        </div>
 
-        
-          
-          
-      </Wrapper>
+
+      </div>
+
+      // </Wrapper>
     )
-  };
+  }
+}
 }
 
 export default App;

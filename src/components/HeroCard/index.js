@@ -5,9 +5,7 @@ import "./style.css";
 
 
 function HeroCard(props) {
-//   function deleteMe(){
-//     props.handleRedXClick(props.id);
-//   }
+
   return (
     <div className="card">
       <div className="img-container">
@@ -18,15 +16,9 @@ function HeroCard(props) {
           <li>
             <strong>Name:</strong> {props.name}
           </li>
-          {/* <li>
-            <strong>Occupation:</strong> {props.occupation}
-          </li>
-          <li>
-            <strong>Location:</strong> {props.location}
-          </li> */}
         </ul>
       </div>
-      {/* <span className="remove" onClick={()=>{props.handleRedXClick(props.id)}}>𝘅</span> */}
+
     </div>
   );
 }

@@ -2,6 +2,7 @@
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
+  color: red;
 }
 .theCards {
   padding-top: 50px;
@@ -21,4 +22,9 @@
 }
 .score {
   float: left;
+  color: red;
+}
+.winScreen {
+  text-align: center;
+  margin:auto;
 }
